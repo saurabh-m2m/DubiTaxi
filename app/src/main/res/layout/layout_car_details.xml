@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:elevation="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sedan_car"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius_top_left="7dp"
+                    app:riv_corner_radius_top_right="7dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_CarDetailsClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/close_add_vehicle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/EditVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#9D9D9D"
+                android:drawableStart="@drawable/edit_add_vehicle"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:text="Edit Vehicle"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/mMainLayout"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@+id/mLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclemodel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Model Name"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/vehiclemodelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="Hyundai"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclemodel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclemodel" />
+
+                <View
+                    android:id="@+id/viewC1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclemodel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Vehicle Number"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclemodel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclemodelNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="Vehicle Number"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclNumber" />
+
+                <View
+                    android:id="@+id/viewC2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Vehicle Color"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclemodelNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleColorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="Red"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclColor" />
+
+                <View
+                    android:id="@+id/viewC3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclColor" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Vehicle Type"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclColor" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="SUV"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclType"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclType" />
+
+                <View
+                    android:id="@+id/viewC4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclType" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleAvailSeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Available Seats"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclType" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleSeatNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehicleAvailSeat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehicleAvailSeat" />
+
+                <View
+                    android:id="@+id/viewC5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicleAvailSeat" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleRelationship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Relationship with Vehicle"
+                    android:textColor="@color/dot_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicleSeatNo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleRelationshipName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="Tenant"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehicleRelationship"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehicleRelationship" />
+
+                <View
+                    android:id="@+id/viewC6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicleRelationship" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclePolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Accident Policy Number"
+                    android:textColor="@color/dot_color"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicleRelationshipName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclePolicyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="7453535"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclePolicy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclePolicy" />
+
+                <View
+                    android:id="@+id/viewC7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclePolicy" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclePolicyDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Accident Policy Date"
+                    android:textColor="@color/dot_color"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclePolicyNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehiclePolicyDates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="12/05/22"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_vehiclePolicyDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_vehiclePolicyDate" />
+
+                <View
+                    android:id="@+id/viewC8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehiclePolicyDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_uploadPermission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Upload Permission"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewC8" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/recycler_uploadPermission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/document_uplaod_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_uploadPermission"
+                    tools:listitem="@layout/layout_item_upload_permission" />
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/uploadSoatImageShow"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/walk_3"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_uploadPermission"
+                    app:layout_constraintStart_toEndOf="@+id/recycler_uploadPermission"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_uploadPermission"
+                    app:layout_constraintTop_toTopOf="@+id/recycler_uploadPermission"
+                    app:riv_corner_radius="3dp" />
+
+                <View
+                    android:id="@+id/viewC9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/dot_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_uploadPermission" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_vehicleImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Vehicle Image"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewC9" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ShowImageRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="-19dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_vehicleImg"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicleImg"
+                    tools:listitem="@layout/show_image_item" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

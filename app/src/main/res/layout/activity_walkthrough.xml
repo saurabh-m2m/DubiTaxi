@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerTutorials"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/dotsIndicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/dotsIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            app:dotsColor="@color/black"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:dotsStrokeWidth="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_walk_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:progressMode="true"
+            app:dotsStrokeColor="#949494"
+            app:selectedDotColor="@color/selected_dot_color" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_ViewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:paddingVertical="13dp"
+            android:paddingStart="30dp"
+            android:text="@string/skip"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_walk_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/yellow_btn_corner"
+            android:paddingHorizontal="43dp"
+            android:paddingVertical="15dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_ViewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_ViewPager" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context=".ui.selectUserType.driverSignUp.addVehicle.AddVehicleActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backpress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_ic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_addvehicles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Add Vehicle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                app:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/backpress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/backpress"
+                app:layout_constraintTop_toTopOf="@+id/backpress" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:padding="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_header">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_uploadDrivingLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="Vehicle Type"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:fontFamily="@font/roboto_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/VehicleTypeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintStart_toStartOf="@+id/tv_uploadDrivingLicense"
+                app:layout_constraintTop_toBottomOf="@+id/tv_uploadDrivingLicense"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/vehicle_service_type_item" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_vehicleDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Vehicle Details"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:fontFamily="@font/roboto_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/VehicleTypeRecyclerView" />
+
+            <TextView
+                android:id="@+id/tv_CarName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Vehicle Number"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vehicleDetails" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/Et_carNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter Vehicle Number"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:maxLength="6"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_CarName" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toStartOf="@+id/tv_CarName"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar"
+                app:layout_constraintTop_toBottomOf="@+id/Et_carNumber" />
+
+            <TextView
+                android:id="@+id/tv_CarModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Vehicle Model Name"
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar2"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toTopOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/Et_carModelNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter Vehicle Model Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_CarModel" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view5"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar2" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toStartOf="@+id/Et_carModelNumber"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar2"
+                app:layout_constraintTop_toBottomOf="@+id/Et_carModelNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mSoat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Vehicle Type"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_soat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter SOAT"
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mSoat" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mSoatNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter SOAT"
+                android:inputType="text"
+                android:maxLength="12"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_soat" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mSoatNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mSoatDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter SOAT Date"
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mSoatDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter SOAT Date"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mSoatDate" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mSoatDate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mUploadSoat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Upload SOAT"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLayoutVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mUploadSoat">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_uploadDoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Upload"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/uploadSoatImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/walk_3"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/mLayoutVehicle"
+                app:layout_constraintStart_toEndOf="@+id/mLayoutVehicle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mUploadSoat"
+                app:layout_constraintTop_toTopOf="@+id/mLayoutVehicle"
+                app:riv_corner_radius="3dp" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uploadSoatImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mUploadImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Upload Vehicle Image"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLayoutVehicleA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mUploadImg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_uploadDocA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Upload"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mUploadVehileImagerecyclerview"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="@+id/mLayoutVehicleA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mLayoutVehicleA"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mUploadImg"
+                app:layout_constraintTop_toTopOf="@+id/mLayoutVehicleA"
+                tools:listitem="@layout/uploaded_vehivle_image_item" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mUploadVehileImagerecyclerview" />
+
+            <TextView
+                android:id="@+id/tv_mVehicleColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Vehicle Color"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar3"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toTopOf="@+id/view11"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/Et_mVehicleColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter Vehicle Color"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleColor" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toBottomOf="@+id/Et_mVehicleColor"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCar3" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Et_mVehicleColor" />
+
+            <TextView
+                android:id="@+id/tv_mVehicleSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Number of Available Seats"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconSeat"
+                app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/seats_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/Et_mVehicleSeat"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/Et_mVehicleSeat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter Number of Available Seats"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleSeat" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view13"
+                app:layout_constraintStart_toEndOf="@+id/img_iconSeat" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Et_mVehicleSeat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mVehicleRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Vehicle Registration Certificate / Tarjeta de propiedad"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLayoutVehicleB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleRegistration">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_uploadDocB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Upload"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/uploadRegistrationImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/walk_3"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/mLayoutVehicleB"
+                app:layout_constraintStart_toEndOf="@+id/mLayoutVehicleB"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleRegistration"
+                app:layout_constraintTop_toTopOf="@+id/mLayoutVehicleB"
+                app:riv_corner_radius="3dp" />
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uploadRegistrationImage" />
+
+            <TextView
+                android:id="@+id/tv_mVehicleSeatRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Vehicle Registration Certification Date"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarRegistration"
+                app:layout_constraintTop_toBottomOf="@+id/view14" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCarRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/Et_mVehicleRegistration"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Et_mVehicleRegistration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableEnd="@drawable/calender_ic"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="DD/MM/YY"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleSeatRegistration" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view16"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarRegistration" />
+
+            <View
+                android:id="@+id/view16"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Et_mVehicleRegistration" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mRelationshipVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Who's Vehicle and Relationship with Vehicle"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/mCheckBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:button="@drawable/custome_check_box"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="10dp"
+                android:text="Owner"
+                android:checked="false"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mRelationshipVehicle" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/mCheckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:button="@drawable/custome_check_box"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="10dp"
+                android:text="Tenant"
+                android:checked="false"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCheckBox1" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/mCheckBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:button="@drawable/custome_check_box"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="10dp"
+                android:text="Lease"
+                android:checked="false"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCheckBox2" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/mCheckBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:button="@drawable/custome_check_box"
+                android:checked="false"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="10dp"
+                android:text="Other"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCheckBox3" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_mDescribe"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="#F5F5F5"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:hint="Describe here..."
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dot_color"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCheckBox4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mVehicleTech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Vehicle technical inspection sheet /\n Revisión técnica"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mDescribe" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLayoutVehicleC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleTech">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_uploadDocC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Upload"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/Vehicletechnical"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/walk_3"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/mLayoutVehicleC"
+                app:layout_constraintStart_toEndOf="@+id/mLayoutVehicleC"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleTech"
+                app:layout_constraintTop_toTopOf="@+id/mLayoutVehicleC"
+                app:riv_corner_radius="3dp"
+                tools:listitem="@layout/upload_image_document" />
+
+            <View
+                android:id="@+id/view17"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Vehicletechnical" />
+
+            <TextView
+                android:id="@+id/tv_mVehicleTechSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Vehicle technical inspection sheet Date"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarTech"
+                app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCarTech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/Tv_mVehicleTech"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Tv_mVehicleTech"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableEnd="@drawable/calender_ic"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="DD/MM/YY"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view18"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehicleTechSeat" />
+
+            <View
+                android:id="@+id/view18"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view19"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarTech" />
+
+            <View
+                android:id="@+id/view19"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Tv_mVehicleTech" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mVehiclePermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Permissions/allowance/licence for drive people"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view19" />
+
+            <RadioGroup
+                android:id="@+id/mRadioPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_mVehiclePermission"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehiclePermission">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/mRadioPermissionNeedA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/custome_check_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="10dp"
+                    android:text="I don't need any permission"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/mRadioPermissionNoNeedB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:button="@drawable/custome_check_box"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="10dp"
+                    android:text="I have a permission from govt."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mVehiclePermissionUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Upload Permission / Permiso de taxi"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mRadioPermission" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLayoutVehicleD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehiclePermissionUpload">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_uploadDocD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Upload"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/UploadPermission"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/walk_3"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/mLayoutVehicleD"
+                app:layout_constraintStart_toEndOf="@+id/mLayoutVehicleD"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehiclePermissionUpload"
+                app:layout_constraintTop_toTopOf="@+id/mLayoutVehicleD"
+                app:riv_corner_radius="3dp"
+                tools:listitem="@layout/upload_image_document" />
+
+            <View
+                android:id="@+id/view20"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UploadPermission" />
+
+            <TextView
+                android:id="@+id/tv_mVehiclePermiso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Permiso de taxi"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarPermiso"
+                app:layout_constraintTop_toBottomOf="@+id/view20" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_iconCarPermiso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="9dp"
+                android:src="@drawable/car_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/Tv_mVehiclePermisDate"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Tv_mVehiclePermisDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableEnd="@drawable/calender_ic"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="DD/MM/YY"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view21"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mVehiclePermiso" />
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toTopOf="@+id/view22"
+                app:layout_constraintStart_toEndOf="@+id/img_iconCarPermiso" />
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Tv_mVehiclePermisDate" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/img_mCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:button="@drawable/add_vehicle_checked"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view22" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mCheckText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_33sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Acepto que toda información escrita en este formulario sea totalmente verídica."
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_mCheck"
+                app:layout_constraintStart_toEndOf="@+id/img_mCheck"
+                app:layout_constraintStart_toStartOf="@+id/img_mCheck"
+                app:layout_constraintTop_toTopOf="@+id/img_mCheck" />
+
+            <TextView
+                android:id="@+id/btn_mAddVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/yellow_btn_corner"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mCheckText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

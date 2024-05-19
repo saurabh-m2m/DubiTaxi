@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    tools:context=".ui.selectUserType.createmobilenumber.CreateAccountActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/back_ic"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_language_logoP"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mback" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_passenger_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_language_logoP">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_phone_passenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/mobile_login_passenger"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/mView7"
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:background="@color/view"
+            app:layout_constraintStart_toEndOf="@+id/img_phone_passenger"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_mobile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Enter Mobile Number"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintStart_toEndOf="@+id/mView7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="-10dp"
+            android:gravity="center"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_arrowColor="@color/black"
+            app:ccp_arrowSize="20dp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_defaultPhoneCode="51"
+            app:ccp_showArrow="true"
+            app:ccp_showFlag="false"
+            app:ccp_textGravity="LEFT"
+            app:ccp_showNameCode="false"
+            app:layout_constraintStart_toStartOf="@+id/tv_mobile_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile_phone" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_phone_passenger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:hint="Enter the Number "
+            android:inputType="number"
+            android:textStyle="bold"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ccp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ccp"
+            app:layout_constraintTop_toTopOf="@+id/ccp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_downLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_passenger_mobile" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_passenger_continueP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/yellow_btn_corner"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+      android:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

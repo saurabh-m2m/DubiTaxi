@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.passengerSignUp.myTrip.detailing.MyTripDetailingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainHeaderMyTripDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpressMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookingIDdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="#8125697418"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backpressMyTripDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backpressMyTripDetails" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#DFDFDF"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainHeaderMyTripDetails" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corner_5dp_with_white"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:layout_editor_absoluteX="15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mBookingMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Booking Id"
+            android:textColor="@color/border"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mBookingIdMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="8125697418"
+            android:textColor="#FF3D3D"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/mBookingMyTripDetails"
+            app:layout_constraintTop_toBottomOf="@+id/mBookingMyTripDetails" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mPickupPackageMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Date &amp; Time"
+            android:textColor="@color/border"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mBookingMyTripDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mBookingMyTripDetails" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mPickupDocumentMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="20-04-23 &amp; 10:00 AM"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mBookingIdMyTripDetails"
+            app:layout_constraintEnd_toEndOf="@+id/mPickupPackageMyTripDetails"
+            app:layout_constraintTop_toTopOf="@+id/mBookingIdMyTripDetails" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toEndOf="@+id/mPickupDocumentMyTripDetails"
+            app:layout_constraintStart_toStartOf="@+id/mBookingIdMyTripDetails"
+            app:layout_constraintTop_toBottomOf="@+id/mBookingIdMyTripDetails" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mLocationPinMyTripDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1"
+            app:srcCompat="@drawable/location_checkout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTripPickupMyTripDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Noida Sector 62, Noida"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintTop_toTopOf="@+id/mLocationPinMyTripDetails" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTripDropMyTripDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Sarita Vihar, Delhi"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/mTripPickupMyTripDetails" />
+        <!--..................For On-Going Details..............-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintOnGoingDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintTop_toBottomOf="@+id/mLocationPinMyTripDetails">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/mLayoutArrivingMyTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTitleA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Est.Fare : "
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/midmMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="€50"
+                    android:textColor="#02B509"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/mTitleA"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTitleB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="54dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="OTP : "
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/midmMin"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mEATTitel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4561"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/mTitleB"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTitleC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="54dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="ETA : "
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/mEATTitel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mOTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3 Min"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/mTitleC"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mLayoutArrivingMyTrip"
+                app:layout_constraintStart_toStartOf="@+id/mLayoutArrivingMyTrip"
+                app:layout_constraintTop_toBottomOf="@+id/mLayoutArrivingMyTrip" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTotalDistanceMyTripDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Total Distance"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDistanceMyTripDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="10 km"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mTotalDistanceMyTripDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mTotalDistanceMyTripDetails" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mDistanceMyTripDetails"
+                app:layout_constraintStart_toStartOf="@+id/mTotalDistanceMyTripDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mTotalDistanceMyTripDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mModeofPaymentMyTripDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Mode of Payment"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDebitCardMyTripDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Debit Card"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mModeofPaymentMyTripDetails"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/mModeofPaymentMyTripDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDriverDetailMyTripDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Driver Detail"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/mModeofPaymentMyTripDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mModeofPaymentMyTripDetails" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccArrivingSoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mDriverDetailMyTripDetails">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/mDriverImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/placeholder_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/_500sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Raul Hicks"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/mDriverImage"
+                    app:layout_constraintTop_toTopOf="@+id/mDriverImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleColorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Color"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/mDriverName"
+                    app:layout_constraintTop_toBottomOf="@id/mDriverName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehicleColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=": White"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleColorText"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleColorText"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleColorText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Name"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/TvVehicleColorText"
+                    app:layout_constraintTop_toBottomOf="@id/TvVehicleColorText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehiclName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" : BMW"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleNameText"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleNameText"
+                    app:layout_constraintStart_toStartOf="@+id/mVehicleColor"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleNameText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleNumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle No."
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/TvVehicleNameText"
+                    app:layout_constraintTop_toBottomOf="@id/TvVehicleNameText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehiclNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" : DUB810"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleNumberText"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleNumberText"
+                    app:layout_constraintStart_toStartOf="@+id/mVehiclName"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleNumberText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mChatImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-15dp"
+                    android:padding="10dp"
+                    android:src="@drawable/chat_ic_arriving_soon"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@id/mCallImage"
+                    app:layout_constraintTop_toTopOf="@+id/mDriverImage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mCallImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:padding="10dp"
+                    android:src="@drawable/call_arriving_soon"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/mChatImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mChatImage" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--..................For Up-Coming Details..............-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintUpComingDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/mTripDropMyTripDetails"
+            app:layout_constraintStart_toStartOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintTop_toBottomOf="@+id/constraintOnGoingDetails">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTitleAUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Est.Fare : "
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/midmMinUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€50"
+                android:textColor="#02B509"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/mTitleAUpcoming"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mTitleAUpcoming" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/midmMinUpcoming"
+                app:layout_constraintStart_toStartOf="@+id/mTitleAUpcoming"
+                app:layout_constraintTop_toBottomOf="@+id/mTitleAUpcoming" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTimeDateeUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Date &amp; Time"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDateTimeUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="20-04-23 &amp; 10:00 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mTimeDateeUpcoming"
+                app:layout_constraintEnd_toStartOf="@+id/ivEditUpComing"
+                app:layout_constraintTop_toTopOf="@+id/mTimeDateeUpcoming" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEditUpComing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/mDateTimeUpcoming"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/mDateTimeUpcoming"
+                app:srcCompat="@drawable/edit_my_trip" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/ivEditUpComing"
+                app:layout_constraintStart_toStartOf="@+id/mTimeDateeUpcoming"
+                app:layout_constraintTop_toBottomOf="@+id/mTimeDateeUpcoming" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mVehicleTypeUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Vehicle Type"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view5"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDubiPrimeUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Dubi Prime"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mVehicleTypeUpcoming"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="@+id/mVehicleTypeUpcoming" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mDubiPrimeUpcoming"
+                app:layout_constraintStart_toStartOf="@+id/mVehicleTypeUpcoming"
+                app:layout_constraintTop_toBottomOf="@+id/mVehicleTypeUpcoming" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTotalDistanceUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Total Distance"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view6"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTotlDistanceUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="10 km"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mTotalDistanceUpcoming"
+                app:layout_constraintEnd_toEndOf="@+id/view6"
+                app:layout_constraintTop_toTopOf="@+id/mTotalDistanceUpcoming" />
+
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mTotlDistanceUpcoming"
+                app:layout_constraintStart_toStartOf="@+id/mTotalDistanceUpcoming"
+                app:layout_constraintTop_toBottomOf="@+id/mTotalDistanceUpcoming" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mPaymentUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Mode of Payment"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mModeOfPaymentUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Debit Card"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mPaymentUpcoming"
+                app:layout_constraintEnd_toEndOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/mPaymentUpcoming" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--..................For Past Details..............-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintPastDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/mTripDropMyTripDetails"
+            app:layout_constraintStart_toStartOf="@+id/mLocationPinMyTripDetails"
+            app:layout_constraintTop_toBottomOf="@+id/constraintOnGoingDetails">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mActualFarePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Actual Fare"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mRecoFareFeePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="€50"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/mActualFarePastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mActualFarePastDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mStatusPastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Status"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mActualFarePastDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mActualFarePastDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mCompletedPastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Completed"
+                android:textColor="@color/green"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mRecoFareFeePastDetails"
+                app:layout_constraintEnd_toEndOf="@+id/mStatusPastDetails"
+                app:layout_constraintTop_toTopOf="@+id/mRecoFareFeePastDetails" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mCompletedPastDetails"
+                app:layout_constraintStart_toStartOf="@+id/mRecoFareFeePastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mRecoFareFeePastDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTimeDateePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Ride Date &amp; Time"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view8"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDateTimePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="20-04-23 &amp; 10:00 AM"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mTimeDateePastDetails"
+                app:layout_constraintEnd_toEndOf="@+id/view8"
+                app:layout_constraintTop_toTopOf="@+id/mTimeDateePastDetails" />
+
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mDateTimePastDetails"
+                app:layout_constraintStart_toStartOf="@+id/mTimeDateePastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mTimeDateePastDetails" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mVehicleTypePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Vehicle Type"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view9"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDubiPrimePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Dubi Prime"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mVehicleTypePastDetails"
+                app:layout_constraintEnd_toEndOf="@+id/view9"
+                app:layout_constraintTop_toTopOf="@+id/mVehicleTypePastDetails" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mDubiPrimePastDetails"
+                app:layout_constraintStart_toStartOf="@+id/mVehicleTypePastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mVehicleTypePastDetails" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTotalDistancePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Total Distance"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view10"
+                app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTotlDistancePastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="10 km"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mTotalDistancePastDetails"
+                app:layout_constraintEnd_toEndOf="@+id/view10"
+                app:layout_constraintTop_toTopOf="@+id/mTotalDistancePastDetails" />
+
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="@+id/mTotlDistancePastDetails"
+                app:layout_constraintStart_toStartOf="@+id/mTotalDistancePastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mTotalDistancePastDetails" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mPaymentPastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Mode of Payment"
+                android:textColor="@color/border"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/view11"
+                app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mModeOfPaymentPastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Debit Card"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mPaymentPastDetails"
+                app:layout_constraintEnd_toEndOf="@+id/view11"
+                app:layout_constraintTop_toTopOf="@+id/mPaymentPastDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mDriverPastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Driver Detail"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/mPaymentPastDetails"
+                app:layout_constraintTop_toBottomOf="@+id/mPaymentPastDetails" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccArrivingSoonPastDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mDriverPastDetails">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/mDriverImagePastDetails"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/placeholder_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/_500sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mDriverNamePastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Raul Hicks"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/mDriverImagePastDetails"
+                    app:layout_constraintTop_toTopOf="@+id/mDriverImagePastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleColorTextPastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Color"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/mDriverNamePastDetails"
+                    app:layout_constraintTop_toBottomOf="@id/mDriverNamePastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehicleColorPastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=": White"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleColorTextPastDetails"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleColorTextPastDetails"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleColorTextPastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleNameTextPastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle Name"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/TvVehicleColorTextPastDetails"
+                    app:layout_constraintTop_toBottomOf="@id/TvVehicleColorTextPastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehiclNamePastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" : BMW"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleNameTextPastDetails"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleNameTextPastDetails"
+                    app:layout_constraintStart_toStartOf="@+id/mVehicleColorPastDetails"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleNameTextPastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/TvVehicleNumberTextPastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vehicle No."
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/TvVehicleNameTextPastDetails"
+                    app:layout_constraintTop_toBottomOf="@id/TvVehicleNameTextPastDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mVehiclNumberPastDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" : DUB810"
+                    android:textColor="#707070"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/TvVehicleNumberTextPastDetails"
+                    app:layout_constraintStart_toEndOf="@id/TvVehicleNumberTextPastDetails"
+                    app:layout_constraintStart_toStartOf="@+id/mVehiclNamePastDetails"
+                    app:layout_constraintTop_toTopOf="@id/TvVehicleNumberTextPastDetails" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnRateReviewPastDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/yellow_btn_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Rate &amp; Review"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCancelRideUpComing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/red_btn_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Cancel Ride"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/consLinearOnGoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancelRideOnGoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/red_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Cancel Ride"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnTrackOnGoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="15dp"
+            android:text="Track"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

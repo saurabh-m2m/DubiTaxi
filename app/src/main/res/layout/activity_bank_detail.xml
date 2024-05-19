@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        tools:context=".ui.selectUserType.driverSignUp.bankDetails.BankDetailActivity">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Profile Creation"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/tab_bank_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_personalDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Personal Detail"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mProgressBar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_driverDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Driver Detail"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Tv_personalDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Tv_personalDetail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_BankDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Bank Detail"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Tv_driverDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Tv_driverDetail" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mBankDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="Bank Details"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tv_BankDetail" />
+
+        <TextView
+            android:id="@+id/tv_mBankAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Account Number CCI"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankDetails" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_mDebit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/debit_card_ic"
+            app:layout_constraintBottom_toTopOf="@+id/Bview1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EnterAccountNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter Account Number CCI"
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bview2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankAccount" />
+
+        <View
+            android:id="@+id/Bview2"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/Bview1"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebit" />
+
+        <View
+            android:id="@+id/Bview1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/tv_mBankAccount"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebit"
+            app:layout_constraintTop_toBottomOf="@+id/EnterAccountNumber" />
+
+        <TextView
+            android:id="@+id/tv_mBankAccountHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Account Holder Name"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mBankPerson"
+            app:layout_constraintTop_toBottomOf="@+id/Bview1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_mBankPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/name_profile_creation"
+            app:layout_constraintBottom_toTopOf="@+id/Bview4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_driverName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:digits="abcdefghijklmnopqrstuvwxyl ABCHDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter Account Holder Name"
+            android:inputType="text"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bview3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankAccountHolderName" />
+
+        <View
+            android:id="@+id/Bview3"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/Bview4"
+            app:layout_constraintStart_toEndOf="@+id/img_mBankPerson" />
+
+        <View
+            android:id="@+id/Bview4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Et_driverName" />
+
+        <TextView
+            android:id="@+id/tv_mBankBranchName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Bank Branch Name"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mBankName"
+            app:layout_constraintTop_toBottomOf="@+id/Bview4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_mBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/bank_branch_ic"
+            app:layout_constraintBottom_toTopOf="@+id/Bview6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_brancheName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:digits="abcdefghijklmnopqrstuvwxyl ABCHEFGHIJKLMNOPQRSTUVWXYZ ,0123456789 "
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter Bank Branch Name"
+            android:inputType="text"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bview5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankBranchName" />
+
+        <View
+            android:id="@+id/Bview5"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/Bview6"
+            app:layout_constraintStart_toEndOf="@+id/img_mBankName" />
+
+        <View
+            android:id="@+id/Bview6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Et_brancheName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mBankYepe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="Yape"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bview6" />
+
+        <TextView
+            android:id="@+id/tv_mBankAccountYepe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Yape Number"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebitYepe"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankYepe" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_mDebitYepe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/debit_card_ic"
+            app:layout_constraintBottom_toTopOf="@+id/Bview8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/YapeNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter Yape Number"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            android:maxLength="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bview7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankAccountYepe" />
+
+        <View
+            android:id="@+id/Bview7"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/Bview8"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebitYepe" />
+
+        <View
+            android:id="@+id/Bview8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YapeNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mBankPlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="Plin"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bview8" />
+
+        <TextView
+            android:id="@+id/tv_mBankAccountPlin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Plin Number"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebitPlin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankPlin" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_mDebitPlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/debit_card_ic"
+            app:layout_constraintBottom_toTopOf="@+id/Bview10"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_driverPlin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Plin Number"
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:maxLength="9"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bview9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mBankAccountPlin" />
+
+        <View
+            android:id="@+id/Bview9"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/Bview10"
+            app:layout_constraintStart_toEndOf="@+id/img_mDebitPlin" />
+
+        <View
+            android:id="@+id/Bview10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Et_driverPlin" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:button="@drawable/counstomcheck_box_a"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="8dp"
+            android:background="@null"
+            android:visibility="gone"
+            android:text="Agree Terms and Conditions"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bview10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_mBankSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/yellow_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/mVehicleTypeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:button="@drawable/radio_select_bg"
+        android:checked="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbvng"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toTopOf="@+id/mVehicleTypeCheckBox"
+        app:layout_constraintBottom_toBottomOf="@+id/mVehicleTypeCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/mVehicleTypeCheckBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

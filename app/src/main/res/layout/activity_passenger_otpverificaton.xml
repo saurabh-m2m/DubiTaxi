@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    tools:context=".ui.selectUserType.otpVerifiction.OTPVerificatonActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_language_logoP"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_otp_passenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_language_logoP">
+
+        <TextView
+            android:id="@+id/tv_verification_codeP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification Code"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_mobile_phoneP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="8dp"
+            android:paddingVertical="5dp"
+            android:text="Enter 4 digit verification code (OTP) sent on your registered Mobile Number."
+            android:textColor="@color/dot_color"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_verification_codeP" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutOtp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="@+id/tv_mobile_phoneP"
+            app:layout_constraintStart_toStartOf="@+id/tv_mobile_phoneP"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile_phoneP">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mOne"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+               android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpeditbackground"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mTwo"
+                style="@style/Text_Medium"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpeditbackground"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/mThree"
+                app:layout_constraintStart_toEndOf="@+id/mOne"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mThree"
+                style="@style/Text_Medium"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpeditbackground"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/mFour"
+                app:layout_constraintStart_toEndOf="@+id/mTwo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mFour"
+                style="@style/Text_Medium"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpeditbackground"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mThree"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tv_otp_dont_recieveP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Didn't Receive OTP?"
+            android:textColor="@color/dot_color"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutOtp" />
+
+        <TextView
+            android:id="@+id/tvResendOtpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="Resend"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_otp_dont_recieveP"
+            app:layout_constraintEnd_toEndOf="@+id/layoutOtp"
+            app:layout_constraintTop_toTopOf="@+id/tv_otp_dont_recieveP" />
+
+        <TextView
+            android:id="@+id/OtpTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00.00"
+            android:textColor="#F61D0D"
+            android:textSize="15sp"
+            android:drawableStart="@drawable/clock_red"
+            android:fontFamily="@font/roboto_black"
+            android:visibility="visible"
+            android:layout_marginEnd="4dp"
+            android:drawablePadding="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_otp_dont_recieveP"
+            app:layout_constraintEnd_toEndOf="@+id/layoutOtp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutOtp"
+            app:layout_constraintTop_toTopOf="@+id/tv_otp_dont_recieveP" />
+
+        <TextView
+            android:id="@+id/btn_OTP_continueP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/yellow_btn_corner"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/OtpTimer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

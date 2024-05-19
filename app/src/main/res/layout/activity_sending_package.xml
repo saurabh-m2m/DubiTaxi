@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.passengerSignUp.sendingHome.SendingPackageActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainPackageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpressSetDropMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaxiSchedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Package"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/mView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:elevation="3dp"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainPackageHeader" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocationDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="20dp"
+        android:text="Location Detail"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mView"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mSetPickupLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/set_pickup_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
+
+    <TextView
+        android:id="@+id/btnSetPickupLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/yellow_btn_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingVertical="15dp"
+        android:paddingStart="12dp"
+        android:text="Set Pick up Location"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
+
+    <TextView
+        android:id="@+id/btnSetDropLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_white_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="14dp"
+        android:text="Set Drop Location"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSetPickupLocation"
+        app:layout_constraintStart_toStartOf="@+id/btnSetPickupLocation"
+        app:layout_constraintTop_toBottomOf="@+id/btnSetPickupLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectPickupDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Select Pick up Detail"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSetDropLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/PickupDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableEnd="@drawable/calender_pickup_date"
+        android:drawablePadding="71dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Pick up Date"
+        android:textColor="@color/dot_color"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tvSelectPickupDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectPickupDetail" />
+
+    <View
+        android:id="@+id/mView1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="7dp"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintTop_toBottomOf="@+id/PickupDate"
+        app:layout_constraintEnd_toEndOf="@+id/PickupDate"
+        app:layout_constraintStart_toStartOf="@+id/PickupDate" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/PickupTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/time_pickup"
+        android:drawablePadding="66dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Pick up Time"
+        android:textColor="@color/dot_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/PickupDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PickupDate" />
+    <View
+        android:id="@+id/mView2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="7dp"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintTop_toBottomOf="@+id/PickupTime"
+        app:layout_constraintEnd_toEndOf="@+id/PickupTime"
+        app:layout_constraintStart_toStartOf="@+id/PickupTime" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWhattoDeliver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="What to Deliver?"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mView1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EtWhattoDeliver"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_corner"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="start"
+        android:hint="Type here..."
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhattoDeliver" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPackageDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Package Detail"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtWhattoDeliver" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/PackageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+android:paddingEnd="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Package Value (optional)"
+        android:textColor="@color/dot_color"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPackageDetail"
+        app:layout_constraintTop_toBottomOf="@+id/tvPackageDetail" />
+
+    <View
+        android:id="@+id/mView3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="7dp"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintTop_toBottomOf="@+id/PackageValue"
+        app:layout_constraintEnd_toEndOf="@+id/PackageValue"
+        app:layout_constraintStart_toStartOf="@+id/PackageValue" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ApproxWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:paddingEnd="32dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Approx. Weight (in kg)"
+        android:textColor="@color/dot_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/PackageValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PackageValue" />
+    <View
+        android:id="@+id/mView4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="7dp"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintTop_toBottomOf="@+id/ApproxWeight"
+        app:layout_constraintEnd_toEndOf="@+id/ApproxWeight"
+        app:layout_constraintStart_toStartOf="@+id/ApproxWeight" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

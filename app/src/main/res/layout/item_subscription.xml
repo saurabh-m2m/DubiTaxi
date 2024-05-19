@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:orientation="vertical"
+    android:id="@+id/ccMain"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subscription_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBASICPLAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="BASIC PLAN"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOneDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="One Day"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBASICPLAN" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginBottom="37dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="4 Hours"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOneDay" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvServiceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Service Type"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constCircle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPlanServiceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Taxi"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvServiceType" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/TvVehicleType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Vehicle Type"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPlanServiceType" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPlanVehicleType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="SUV"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvVehicleType" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constCircle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/locate_bg"
+        android:elevation="4dp"
+        android:paddingVertical="24dp"
+      android:layout_marginBottom="-105dp"
+        app:layout_constraintTop_toTopOf="@+id/MainLayout"
+        app:layout_constraintBottom_toBottomOf="@id/MainLayout"
+        app:layout_constraintEnd_toEndOf="@id/MainLayout"
+        app:layout_constraintStart_toStartOf="@id/MainLayout">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mPlanPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€503"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

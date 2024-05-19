@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#F0CC25</color>
+    <color name="selected_dot_color">#000000</color>
+    <color name="dot_color">#9D9D9D</color>
+    <color name="radio_box_color">#02B509</color>
+    <color name="add_Vehicle_blue">#276EF1</color>
+    <color name="border">#707070</color>
+    <color name="view">#ECECEC</color>
+    <color name="view_shadow">#EDEDED</color>
+    <color name="purple_200">#CDCBCE</color>
+    <color name="purple_500">#CDCBCE</color>
+    <color name="color_button_bg">#41A7F3</color>
+    <color name="purple_700">#FFFFFF</color>
+    <color name="teal_200">#39C166</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="blue">#276EF1</color>
+    <color name="gray">#666666</color>
+    <color name="red">#FF3D3D</color>
+    <color name="green">#02B509</color>
+
+
+
+
+</resources>

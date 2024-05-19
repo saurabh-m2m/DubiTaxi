@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.passengerSignUp.setLocation.EnterDropOffLocationActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackpressDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:src="@drawable/arrow_down_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mSetPickupLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackpressDrop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_PickupLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/location_box_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackpressDrop">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtPickupLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Pickup Location (Auto Detect)"
+            android:paddingVertical="7dp"
+            android:paddingStart="15dp"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="15sp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mHerat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mHerat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/heart_pickup_location"
+            app:layout_constraintEnd_toStartOf="@+id/PickLocation" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/PickLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/red_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mPinPointImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/line_ic"
+        app:layout_constraintEnd_toEndOf="@+id/mSetPickupLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mSetPickupLocation" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLocation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/location_ic"
+        app:layout_constraintEnd_toEndOf="@+id/mPinPointImage"
+        app:layout_constraintStart_toStartOf="@+id/mPinPointImage"
+        app:layout_constraintTop_toBottomOf="@+id/mPinPointImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_DropLocation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/location_box_color"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_PickupLocation">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mStopLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Stop Location (Stop Location)"
+            android:paddingVertical="7dp"
+            android:paddingStart="15dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivCross"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/close_set_map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/StopLocation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/StopLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/red_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_DropLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/location_box_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_DropLocation1">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtDropLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Where to go (Drop Location)"
+            android:paddingVertical="6dp"
+            android:paddingStart="15dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mHeratDrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mHeratDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/heart_pickup_location"
+            app:layout_constraintEnd_toStartOf="@+id/DropLocationMap" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/DropLocationMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/red_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/add_set_location"
+        app:layout_constraintBottom_toBottomOf="@+id/constraint_DropLocation"
+        app:layout_constraintStart_toEndOf="@+id/constraint_DropLocation"
+        app:layout_constraintTop_toTopOf="@+id/constraint_DropLocation" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/line_ic"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/mPinPointImage"
+        app:layout_constraintStart_toStartOf="@+id/mPinPointImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivLocation1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/location_ic"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/ivLine"
+        app:layout_constraintStart_toStartOf="@+id/ivLine"
+        app:layout_constraintTop_toBottomOf="@+id/ivLine" />
+
+    <View
+        android:id="@+id/view24"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/view_shadow"
+        android:shadowColor="@color/dot_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_DropLocation" />
+
+   <!-- <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:layout_marginHorizontal="-8dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_DropLocation"
+        app:layout_constraintStart_toStartOf="@+id/ivLocation"
+        app:layout_constraintTop_toBottomOf="@+id/view24"
+        tools:listitem="@layout/item_location"
+        app:layout_constraintBottom_toTopOf="@+id/tvSaveLocation"
+       />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view24"
+      />
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSaveLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/saved_location_set_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvLocation"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSaveLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingVertical="5dp"
+        android:text="Saved Location"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSaveLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivSaveLocation"
+        app:layout_constraintTop_toTopOf="@+id/ivSaveLocation" />
+
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/view"
+        app:layout_constraintEnd_toEndOf="@+id/tvSaveLocation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvSaveLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaveLocation" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSetLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/set_location_map"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSetLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingVertical="5dp"
+        android:text="Set Location on Map"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSetLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivSetLocation"
+        app:layout_constraintTop_toTopOf="@+id/ivSetLocation" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/view"
+        app:layout_constraintEnd_toEndOf="@+id/tvSetLocation"
+        app:layout_constraintStart_toStartOf="@+id/tvSetLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetLocation" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRecentPlace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view14"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_recent_pickup"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

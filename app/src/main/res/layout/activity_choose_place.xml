@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.passengerSignUp.choosePlace.ChoosePlaceActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpressCP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddvehicles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Choose a Place"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backpressCP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/backpressCP"
+            app:layout_constraintTop_toTopOf="@+id/backpressCP" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/view26"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="12dp"
+        android:background="#DFDFDF"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainHeader" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view26">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChoosePlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_choose_place" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddSavePlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Saved Place"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerChoosePlace"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDestinationPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Get to your favourite destination faster"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddSavePlace"/>
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDestinationPlace" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mSavedAddressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/saved_location_set_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/UserTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/mSavedAddressImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mUserAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="383 joriseen St, Sunnyside Pretora"
+        android:textColor="@color/dot_color"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="@id/UserTitle"
+        app:layout_constraintTop_toBottomOf="@+id/UserTitle" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constLanguageSelectio"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/bg_language"
+            android:elevation="@dimen/_5sdp"
+            android:layout_margin="1dp"
+
+            android:outlineAmbientShadowColor="@color/black"
+            android:visibility="gone"
+
+            app:layout_constraintTop_toBottomOf="@+id/menu"
+            app:layout_constraintEnd_toStartOf="@+id/menu">
+
+            <!--English start-->
+
+
+            <TextView
+                android:id="@+id/tv_languageEnglish_nameP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:paddingStart="20dp"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ECECEC"
+                android:layout_marginTop="11dp"
+                android:id="@+id/v1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_languageEnglish_nameP"/>
+            <TextView
+                android:id="@+id/tv_languageSpanish_nameP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingStart="20dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_languageEnglish_nameP"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/UserTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/mUserAddress"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E4E4E4"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/menu"
+        app:layout_constraintStart_toStartOf="@+id/mUserAddress"
+        app:layout_constraintTop_toBottomOf="@+id/mUserAddress"
+        android:layout_marginTop="15dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

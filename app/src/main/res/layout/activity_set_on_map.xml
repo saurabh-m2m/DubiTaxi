@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.passengerSignUp.setMap.SetOnMapActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpressSetMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_DropLocation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/location_box_color"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/EtSetLocationMap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="503 Paul gruger St, Pretoria Central"
+                android:paddingVertical="7dp"
+                android:paddingStart="15dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivCrossSetMap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCrossSetMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/close_set_map"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view26"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:shadowColor="@color/dot_color"
+        android:outlineAmbientShadowColor="@color/view_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainHeader" />
+
+    <fragment
+        android:id="@+id/mapSetMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-15dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintBottomPickup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view26" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLocationMapPointerSetMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_map"
+        android:padding="10dp"
+        android:src="@drawable/location_map_pointer"
+        app:layout_constraintBottom_toTopOf="@+id/constraintBottomPickup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintBottomPickup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Saved as Favourite"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintCheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/constraintCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="23dp"
+            android:weightSum="3"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintFav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:button="@drawable/radio_button_custom"
+                android:text="Home" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:button="@drawable/radio_button_custom"
+                android:text="Work" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:button="@drawable/radio_button_custom"
+                android:text="Other" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintFav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/consLinear"
+            app:layout_constraintEnd_toEndOf="@+id/consLinear"
+            app:layout_constraintStart_toStartOf="@+id/consLinear">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/name_ic_save_favourite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/TvHome" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Name"
+                android:textColor="@color/dot_color"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvVistaLocation"
+                app:layout_constraintStart_toStartOf="@+id/tvVistaLocation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tvVistaLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Enter Other Address"
+                android:paddingVertical="10dp"
+                android:paddingStart="@dimen/_1sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/view13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivPerson" />
+
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/view"
+               app:layout_constraintBottom_toTopOf="@+id/view13"
+                app:layout_constraintStart_toEndOf="@+id/ivPerson" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/consLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/red_btn_corner"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yellow_btn_corner"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

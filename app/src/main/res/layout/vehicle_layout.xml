@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="#FCFCFC"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mVehivleItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/mImageA"
+                android:layout_width="75dp"
+                android:layout_height="90dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sedan_car"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="3dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_vihicleType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Vehicle Type"
+                android:textColor="#9D9D9D"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/mImageA"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvvihicleType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Hyundai Creta"
+                android:textColor="#9D9D9D"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_vihicleType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_vihicleType" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvmodelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="SUV"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_vihicleType"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vihicleType" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvtaxiNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="UP830161"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvvihicleType2"
+                app:layout_constraintTop_toBottomOf="@+id/tvvihicleType2" />
+
+            <View
+                android:id="@+id/view23"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="9dp"
+                android:background="#ECECEC"
+                app:layout_constraintEnd_toEndOf="@+id/tvvihicleType2"
+                app:layout_constraintStart_toStartOf="@+id/tv_vihicleType"
+                app:layout_constraintTop_toBottomOf="@+id/tvtaxiNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Color :"
+                android:textColor="#9D9D9D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view23"
+                app:layout_constraintTop_toBottomOf="@+id/view23" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvcolorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Blue"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_color"
+                app:layout_constraintStart_toEndOf="@+id/tv_color"
+                app:layout_constraintTop_toTopOf="@+id/tv_color" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/total_seat"
+                app:layout_constraintBottom_toBottomOf="@+id/tvcolorName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvcolorName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/img_seatNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/roboto_bold"
+                android:src="@drawable/total_seat"
+                android:text="0"
+                android:textColor="#276EF1"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_seat"
+                app:layout_constraintStart_toEndOf="@+id/img_seat"
+                app:layout_constraintTop_toTopOf="@+id/img_seat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

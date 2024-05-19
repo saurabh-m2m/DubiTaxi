@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.selectUserType.driverSignUp.subscription.AddCardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appHeaderCardAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backpressAddCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_ic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Add Card"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/mView5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:elevation="3dp"
+        android:layout_marginTop="12dp"
+        android:shadowColor="#00000029"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appHeaderCardAdd" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mView5">
+
+        <TextView
+            android:id="@+id/tvEnterCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Card Number"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/EtEnterCardNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEnterCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/card_add_card"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtEnterCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+           android:fontFamily="@font/roboto_bold"
+            android:hint="4560 5674 3224 4543"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardNumber"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterCardNumber" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardNumber" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/EtEnterCardNumber"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardNumber"
+            app:layout_constraintTop_toBottomOf="@+id/EtEnterCardNumber" />
+
+        <TextView
+            android:id="@+id/tvEnterCardHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Card Holder Name"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/EtEnterCardHolderName"
+            app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEnterCardHolderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="18dp"
+            android:src="@drawable/name_profile_creation"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtEnterCardHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Ankit Kumar"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardHolderName"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterCardHolderName" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardHolderName" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/EtEnterCardHolderName"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCardHolderName"
+            app:layout_constraintTop_toBottomOf="@+id/EtEnterCardHolderName" />
+
+        <TextView
+            android:id="@+id/tvEnterExpiryDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Expiry Date"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/EtEnterCardHolderName"
+            app:layout_constraintTop_toBottomOf="@+id/view4"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEnterExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="12dp"
+            android:src="@drawable/calendar_add_card"
+            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtEnterExpiryDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="09/24"
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterExpiryDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterExpiryDate" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterExpiryDate" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/EtEnterExpiryDate"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterExpiryDate"
+            app:layout_constraintTop_toBottomOf="@+id/EtEnterExpiryDate" />
+
+        <TextView
+            android:id="@+id/tvEnterCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter CVV"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/EtEnterCVV"
+            app:layout_constraintTop_toBottomOf="@+id/view6"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEnterCVV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/card_add_card"
+            app:layout_constraintBottom_toTopOf="@+id/view8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/EtEnterCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="803"
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCVV"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterCVV" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view8"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCVV" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/EtEnterCVV"
+            app:layout_constraintStart_toEndOf="@+id/imgEnterCVV"
+            app:layout_constraintTop_toBottomOf="@+id/EtEnterCVV" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checRedeemPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:button="@drawable/customecheck_paymentoption"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="12dp"
+            android:text="Redeem Points"
+            android:textColor="@color/dot_color"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSubmitAddCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/yellow_btn_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

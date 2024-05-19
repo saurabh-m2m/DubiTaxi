@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintTripMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintTripId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFBE6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mTripID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Trip ID"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Pickup Date &amp; Time"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mTripID"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mTripID" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mTripIDA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="#A27833387"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/mTripID"
+                        app:layout_constraintTop_toBottomOf="@+id/mTripID" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupDateTimeA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="23, May, 2022, 10:00 AM"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/mPickupDateTime"
+                        app:layout_constraintTop_toBottomOf="@+id/mPickupDateTime" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mLocationPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="17dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintTripId"
+                    app:srcCompat="@drawable/location_checkout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTripPickup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="383 joriseen St, Sunnyside Pretora"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/mLocationPin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mLocationPin"
+                    app:layout_constraintTop_toTopOf="@+id/mLocationPin" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTripDrop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="503 Paul gruger St, Pretoria Central"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mLocationPin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/mTripPickup" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@color/view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTripDrop" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/view1"
+                    app:layout_constraintStart_toStartOf="@+id/view1"
+                    app:layout_constraintTop_toBottomOf="@+id/view1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mTotalDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Total Distance"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mRideType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Ride Type"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mTotalDistance"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintDistance"
+                        app:layout_constraintTop_toTopOf="@+id/mTotalDistance" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mTripKm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="10 Km"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@+id/mTotalDistance"
+                        app:layout_constraintTop_toBottomOf="@+id/mTotalDistance" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mTripNegotiate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Negotiate"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mTripKm"
+                        app:layout_constraintEnd_toEndOf="@+id/mRideType"
+                        app:layout_constraintTop_toTopOf="@+id/mTripKm" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintTripRent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:background="@drawable/corner_5dp"
+                        android:elevation="1.8dp"
+                        android:paddingHorizontal="12dp"
+                        app:layout_constraintEnd_toEndOf="@+id/mTripNegotiate"
+                        app:layout_constraintStart_toStartOf="@+id/mTripKm"
+                        app:layout_constraintTop_toBottomOf="@+id/mTripKm">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mRecommendedFare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Recommended Fare"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mRecommendedFareFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="€50"
+                            android:textColor="@color/green"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/mRecommendedFare"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/mRecommendedFare" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mUserSetFare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="User Set Fare"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/mRecommendedFare"
+                            app:layout_constraintTop_toBottomOf="@+id/mRecommendedFare" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mRecommendedFareFeee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="€50"
+                            android:textColor="@color/green"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/mUserSetFare"
+                            app:layout_constraintEnd_toEndOf="@+id/mRecommendedFareFee"
+                            app:layout_constraintTop_toTopOf="@+id/mUserSetFare" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintPackage"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintDistance"
+                    app:layout_constraintStart_toStartOf="@+id/constraintDistance"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintDistance">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPackageDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Package Details"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_goneMarginTop="15dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupDateTimee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Pickup Date &amp; Time"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/mPackageDetails"
+                        app:layout_constraintTop_toBottomOf="@+id/mPackageDetails" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupDateTimeAA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="23, May, 2022, 10:00 AM"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/mPickupDateTimee"
+                        app:layout_constraintTop_toBottomOf="@+id/mPickupDateTimee" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupPackage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Package"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mPickupDateTimee"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mPickupDateTimee" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPickupDocument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Document"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mPickupDateTimeAA2"
+                        app:layout_constraintEnd_toEndOf="@+id/mPickupPackage"
+                        app:layout_constraintTop_toTopOf="@+id/mPickupDateTimeAA2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPackageValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Package Value"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/mPickupDateTimeAA2"
+                        app:layout_constraintTop_toBottomOf="@+id/mPickupDateTimeAA2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPackageWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Package Weight"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mPackageValue"
+                        app:layout_constraintEnd_toEndOf="@+id/mPickupDocument"
+                        app:layout_constraintTop_toTopOf="@+id/mPackageValue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPackageValueNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/mPackageValue"
+                        app:layout_constraintTop_toBottomOf="@+id/mPackageValue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mPackageWeightKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="20Kg"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mPackageValueNo"
+                        app:layout_constraintEnd_toEndOf="@+id/mPackageWeight"
+                        app:layout_constraintTop_toTopOf="@+id/mPackageValueNo" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mPackageValueNo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mRideFor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Ride Fore"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@id/view3"
+                        app:layout_constraintTop_toBottomOf="@id/view3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mDeliveryCharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Delivery Charges"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mRideFor"
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/mRideFor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mSchedule"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Schedule"
+                        android:textColor="@color/blue"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@+id/mRideFor"
+                        app:layout_constraintTop_toBottomOf="@+id/mRideFor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mRecommendedFareFee3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="€50"
+                        android:textColor="@color/green"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mSchedule"
+                        app:layout_constraintEnd_toEndOf="@+id/mDeliveryCharges"
+                        app:layout_constraintTop_toTopOf="@+id/mSchedule" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mRecommendedFareFee3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTripPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Payment Method"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toTopOf="@+id/mSendyourNegotiatePrice"
+                    app:layout_constraintStart_toStartOf="@+id/constraintPackage"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintPackage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mTripPaymentCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Cash"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mTripPaymentMethod"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintPackage"
+                    app:layout_constraintTop_toTopOf="@+id/mTripPaymentMethod" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mSendyourNegotiatePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Send your Negotiate Price"
+                    android:textColor="@color/green"
+                    android:textSize="13sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/consLinear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTripPaymentMethod" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/consLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/mSendyourNegotiatePrice"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/red_btn_corner"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:paddingVertical="15dp"
+                        android:text="Reject"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/yellow_btn_corner"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:paddingVertical="15dp"
+                        android:text="Accept"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

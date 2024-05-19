@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_bg"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="30dp"
+        tools:context=".ui.selectUserType.passengerSignUp.PassengerSignUpActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:text="Profile Creation"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_circle_image_passenger"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/image_bg"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/CircleImgPassenger"
+                android:layout_width="94dp"
+                android:layout_height="94dp"
+                android:elevation="1dp"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_ic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_circle_image_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-5dp"
+            android:background="@drawable/camera_bg_shape"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/const_circle_image_passenger"
+            app:layout_constraintEnd_toEndOf="@+id/const_circle_image_passenger">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_camera_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/camera_profile_creation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_passenger_idProof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="It will be matched with your provided ID proof"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/const_circle_image_picker" />
+
+        <TextView
+            android:id="@+id/tv_passenger_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter Name"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/Et_passenger_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_passenger_idProof" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_icon_nameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/name_profile_creation"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_passenger_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:digits="qwertyuioplkjhgfdsazxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ     "
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter Name"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_nameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_passenger_name" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_nameProfile" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/Et_passenger_name"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_nameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/Et_passenger_name" />
+
+        <TextView
+            android:id="@+id/tv_passenger_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enter E-mail"
+            android:textColor="@color/dot_color"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_mail"
+            app:layout_constraintTop_toBottomOf="@+id/Et_passenger_name" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_icon_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="9dp"
+            android:src="@drawable/mail"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Et_passenger_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:digits="qwertyuioplkjhgfdsazxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ.@ 11234567890"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Enter E-mail"
+            android:paddingVertical="10dp"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_mail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_passenger_email" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/view"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_mail" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintEnd_toStartOf="@+id/tv_passenger_email"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_mail"
+            app:layout_constraintTop_toBottomOf="@+id/Et_passenger_email" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_driver_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_phone_passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="15dp"
+                android:src="@drawable/mobile_login_passenger"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/mView6"
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:background="@color/view"
+                app:layout_constraintStart_toEndOf="@+id/img_phone_passenger"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_passenger_phoneNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Enter Mobile Number"
+                android:textColor="@color/dot_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/mView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="-10dp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                app:ccpDialog_textColor="@color/black"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_arrowSize="25dp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_contentColor="@color/black"
+                app:ccp_showArrow="true"
+                app:ccp_showFlag="false"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textGravity="LEFT"
+                app:ccp_textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_passenger_phoneNo"
+                app:layout_constraintTop_toBottomOf="@+id/tv_passenger_phoneNo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Et_phone_driver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Ente Mobile Number"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ccp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ccp"
+                app:layout_constraintTop_toTopOf="@+id/ccp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_downLLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_driver_mobile" />
+
+        <TextView
+            android:id="@+id/tv_passenger_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="Select Gender"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_downLLayout" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/mRb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:button="@drawable/radio_button_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="8dp"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_passenger_gender"
+            app:layout_constraintTop_toBottomOf="@+id/tv_passenger_gender" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/mRb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="66dp"
+            android:button="@drawable/radio_button_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="8dp"
+            android:text="Female"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mRb1"
+            app:layout_constraintStart_toEndOf="@+id/mRb1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_passenger_gender"
+            app:layout_constraintTop_toTopOf="@+id/mRb1" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/mRb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:button="@drawable/radio_button_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="8dp"
+            android:text="I prefer not say"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/mRb1"
+            app:layout_constraintTop_toBottomOf="@+id/mRb1" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/Check_box_ReferralP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:button="@drawable/counstomcheck_box"
+            android:checked="false"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="8dp"
+            android:text="Do you have a Referral Code?"
+            android:textColor="@color/dot_color"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/mRb3"
+            app:layout_constraintTop_toBottomOf="@+id/mRb3" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_referral_codeP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/Check_box_ReferralP"
+            app:layout_constraintTop_toBottomOf="@id/Check_box_ReferralP">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="Enter Referral Code"
+                android:textColor="@color/dot_color"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/Et_ReferralCodeP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:inputType="text"
+                android:paddingStart="15dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/view_downLLayoutReferralsP"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_referral_codeP" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/Term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:button="@drawable/counstomcheck_box"
+            app:layout_constraintStart_toStartOf="@+id/view_downLLayoutReferralsP"
+            app:layout_constraintTop_toBottomOf="@+id/view_downLLayoutReferralsP" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Agree Terms and Conditions"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/Term"
+            app:layout_constraintBottom_toBottomOf="@id/Term"
+            app:layout_constraintTop_toTopOf="@+id/Term"/>
+
+
+
+        <TextView
+            android:id="@+id/btn_passenger_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/yellow_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Term" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

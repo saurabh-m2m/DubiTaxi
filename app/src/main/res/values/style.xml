@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDesign</item>
+    </style>
+
+    <!--<style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_filter</item>
+    </style>-->
+
+    <style name="BottomSheetDesign" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyBottomSheetStyle</item>
+    </style>
+
+
+
+    <style name="MyBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="MyBottomTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyBottomSheetStyle</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+    </style>
+
+    <style name="MyBottomThemeA" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyBottomSheetStyle</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#9EA1A7</item>
+        <item name="colorControlActivated">#FFC107</item>
+    </style>
+
+    <style name="Text_Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#E52D25</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- styles.xml -->
+    <style name="CustomRatingBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_star</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+</resources>

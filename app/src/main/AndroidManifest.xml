@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DubiTaxi"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.myTrip.detailing.MyTripDetailingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_trip_detailing"
+            android:theme="@style/Theme.DubiTaxi" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.myTrip.MyTripActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_trip"
+            android:theme="@style/Theme.DubiTaxi" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.savedAddress.SavedAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.subscription.AddCardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.subscription.PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.subscription.SubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.selectUserType.biometricAuthentication.BioMetricAuthenticationActivity"
+            android:exported="true" />
+        <activity android:name=".ui.selectUserType.passengerSignUp.TermAndConditionActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.selectUserType.biometricAuthentication.face.FaceAuthenticationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.sendingHome.SendingPackageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.scheduleBooking.ScheduleBookingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.paymentOption.PaymentOptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.vehicleList.VehicleListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.setDropLocation.SetDropLocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.setMap.SetOnMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.choosePlace.ChoosePlaceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.pickLocation.PickLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.setLocation.EnterDropOffLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.home.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.bankDetails.BankDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.addVehicle.AddVehicleActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.driverDetails.DriverDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.otpVerifiction.OTPVerificatonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.createmobilenumber.CreateAccountActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.language.LanguageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashScreen.WalkthroughActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.driverSignUp.driverPersonaldetails.DriverPersonalDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.SelectUserTypeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectUserType.passengerSignUp.PassengerSignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashScreen.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".base.BaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA4L_dBeJDWuqtBT9ZOOUhjigbh6Lxi43s" />
+    </application>
+
+</manifest>

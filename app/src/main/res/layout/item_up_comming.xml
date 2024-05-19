@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/corner_5dp_with_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mBookingUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Booking Id"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mBookingIdUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="8125697418"
+        android:textColor="#FF3D3D"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mBookingUpComing"
+        app:layout_constraintTop_toBottomOf="@+id/mBookingUpComing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPickupPackageUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Date &amp; Time"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mBookingUpComing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mBookingUpComing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPickupDocumentUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="20-04-23 &amp; 10:00 AM"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mBookingIdUpComing"
+        app:layout_constraintEnd_toEndOf="@+id/mPickupPackageUpComing"
+        app:layout_constraintTop_toTopOf="@+id/mBookingIdUpComing" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/view"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/mPickupDocumentUpComing"
+        app:layout_constraintStart_toStartOf="@+id/mBookingIdUpComing"
+        app:layout_constraintTop_toBottomOf="@+id/mBookingIdUpComing" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mLocationPinUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:srcCompat="@drawable/location_checkout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTripPickupUpComing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Noida Sector 62, Noida"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/mLocationPinUpComing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mLocationPinUpComing"
+        app:layout_constraintTop_toTopOf="@+id/mLocationPinUpComing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTripDropUpComing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Sarita Vihar, Delhi"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mLocationPinUpComing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mTripPickupUpComing" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mEstFareUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Est. Fare"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@+id/mLocationPinUpComing"
+        app:layout_constraintTop_toBottomOf="@+id/mLocationPinUpComing" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEditUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mEstFareUpComing"
+        app:layout_constraintEnd_toStartOf="@+id/mPickupDateTimeUpComing"
+        app:layout_constraintTop_toTopOf="@+id/mEstFareUpComing"
+        app:srcCompat="@drawable/edit_my_trip" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mRecommendedFareFeeeUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="€50"
+        android:textColor="@color/green"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/mEstFareUpComing"
+        app:layout_constraintTop_toBottomOf="@+id/mEstFareUpComing" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPickupDateTimeUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Pickup Date &amp; Time"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mEstFareUpComing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mEstFareUpComing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mPickupDateAndTimeUpComing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="23, May, 2022, 10:00 AM"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mRecommendedFareFeeeUpComing"
+        app:layout_constraintEnd_toEndOf="@+id/mPickupDateTimeUpComing"
+        app:layout_constraintTop_toTopOf="@+id/mRecommendedFareFeeeUpComing" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCancelRideUpComing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/red_btn_corner"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Cancel Ride"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRecommendedFareFeeeUpComing" />
+</androidx.constraintlayout.widget.ConstraintLayout>

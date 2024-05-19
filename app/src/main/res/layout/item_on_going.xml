@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/corner_5dp_with_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mBookingOnGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Booking Id"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mBookingIdOnGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="8125697418"
+        android:textColor="#FF3D3D"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mBookingOnGoing"
+        app:layout_constraintTop_toBottomOf="@+id/mBookingOnGoing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTimeDateOnGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Date &amp; Time"
+        android:textColor="@color/border"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mBookingOnGoing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mBookingOnGoing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mDateTimeOnGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="20-04-23 &amp; 10:00 AM"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mBookingIdOnGoing"
+        app:layout_constraintEnd_toEndOf="@+id/mTimeDateOnGoing"
+        app:layout_constraintTop_toTopOf="@+id/mBookingIdOnGoing" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view"
+        app:layout_constraintEnd_toEndOf="@+id/mDateTimeOnGoing"
+        app:layout_constraintStart_toStartOf="@+id/mBookingIdOnGoing"
+        app:layout_constraintTop_toBottomOf="@+id/mBookingIdOnGoing" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mLocationPinOnGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:srcCompat="@drawable/location_checkout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTripPickupOnGoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Noida Sector 62, Noida"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/mLocationPinOnGoing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mLocationPinOnGoing"
+        app:layout_constraintTop_toTopOf="@+id/mLocationPinOnGoing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mTripDropOnGoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Sarita Vihar, Delhi"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mLocationPinOnGoing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mTripPickupOnGoing" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/mLayoutArrivingOnGoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/mTripDropOnGoing">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTitleA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Est.Fare"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/midmMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=": €50"
+            android:textColor="#02B509"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/mTitleA"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTitleB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="OTP"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/midmMin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mEATTitel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=": 4561"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/mTitleB"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mTitleC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="OTP"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/mEATTitel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":3 Min"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/mTitleC"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/consLinearOnGoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mLayoutArrivingOnGoing"
+        app:layout_constraintStart_toStartOf="@+id/mLayoutArrivingOnGoing"
+        app:layout_constraintTop_toBottomOf="@+id/mLayoutArrivingOnGoing">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancelRideOnGoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/red_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Cancel Ride"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnTrackOnGoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_corner"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="Track"
+            android:paddingHorizontal="25dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

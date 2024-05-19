@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginTop="5dp"
+    android:id="@+id/ccSelectVehicle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCar"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10sp"
+            android:src="@drawable/car"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDubiPrime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Dubi Prime"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/ivCar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:padding="2dp"
+            android:src="@drawable/user_vehicle_list"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDubiPrime"
+            app:layout_constraintStart_toEndOf="@+id/tvDubiPrime"
+            app:layout_constraintTop_toTopOf="@+id/tvDubiPrime" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivUser"
+            app:layout_constraintStart_toEndOf="@+id/ivUser"
+            app:layout_constraintTop_toTopOf="@+id/ivUser" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivUserCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="10 Min."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWhitecar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="White"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintStart_toStartOf="@+id/tvDubiPrime"
+            app:layout_constraintTop_toBottomOf="@+id/tvDubiPrime" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDollerCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="€56.51"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginBottom="12dp"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivUserCount"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserCount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
